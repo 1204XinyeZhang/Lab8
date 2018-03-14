@@ -7,7 +7,6 @@ public class Employee {
 
     private String name;
     private String manager;
-
     /**
      * Constructor for initialization.
      * @param name
@@ -49,4 +48,21 @@ public class Employee {
     public void setManager(final String manager) {
         this.manager = manager;
     }
+
+    public Employee findManager(Employee employee) {
+        return manager;
+    }
+    public int countManagerAbove(Employee employee) {
+        Employee manager = findManager(employee);
+        if (manager == null) {
+            return 0;
+        } else {
+            return 1 + countManagerAbove(manager);
+        }
+    }
 }
+    public int countEmployeeUnder(Employee employee) {
+    int count = 0;
+    for(int i = 0; i < employee.size(); i++) {
+    }
+    }
